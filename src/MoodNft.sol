@@ -112,4 +112,8 @@ contract MoodNft is ERC721, Ownable {
     function getTokenCounter() public view returns (uint256) {
         return s_tokenCounter;
     }
+
+    function getNFTState(uint256 _tokenId) public view returns(NFTState) {
+        return s_tokenIdToState[_tokenId];
+    }
 }
